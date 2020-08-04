@@ -1,0 +1,240 @@
+/**/
+
+@font-face{
+	/*font-family: 幼圆;
+	src: url(http://www.diyiziti.com/Download/246/);*/
+	font-family: 'webfont';
+	font-display: swap;
+	src: url('https://at.alicdn.com/t/webfont_5gw67155won.eot'); /* IE9*/
+	src: url('https://at.alicdn.com/t/webfont_5gw67155won.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('https://at.alicdn.com/t/webfont_5gw67155won.woff2') format('woff2'),
+	url('https://at.alicdn.com/t/webfont_5gw67155won.woff') format('woff'), /* chrome、firefox */
+	url('https://at.alicdn.com/t/webfont_5gw67155won.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('https://at.alicdn.com/t/webfont_5gw67155won.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
+}
+*{
+	padding:0px;
+	margin:0px;
+	font-family: 'webfont';
+	font-style: oblique; 
+}
+.navshow{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.my-card-body{
+	max-height: 300px;
+	overflow-y: scroll;
+	max-height: 387px;
+}
+.photo-div{
+	background-color: #007bff;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	border-radius: 50%;
+	
+}
+.mycarousel-img{
+	width: 100%;
+	height: 437px;
+}
+.anim-photo-div{
+	animation: photo-div-anim 1s 4;
+	animation-delay: 1s;
+}
+.photo-div-extend-anim{
+	animation: photo-div-extend-anim 1.2s 1;
+	animation-fill-mode: forwards;
+}
+.photo{
+	width: 100%;
+	border: 1px solid gainsboro;
+	padding: 1px;
+}
+.photo-ul{
+	display: none;
+}
+.photo-ul li{
+	float: left;
+	width: 33%;
+	list-style: none;
+}
+.num{
+	color: white;
+	width: 20px;
+	font-size: 12px;
+	margin-top: 43px;
+	margin-left: 0px;
+}
+.anim-num{
+	animation: anim-num 1s linear 4;
+	animation-delay: 1s;
+}
+input[type="text"],textarea{
+	border-color: #007bff;
+	min-height: 38px;
+}
+.head-img{
+	width: 100px;
+	height:100px;
+	border-radius: 50%;
+	border: 2px solid #007bff;
+	padding: 5px;
+	float:left;
+	display: block;
+}
+.myname{
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 20px;
+	color: #007bff;
+	font-weight: bold;
+}
+.myname span{
+	font-size: 16px;
+	color:initial;
+	font-weight: initial;
+}
+.self{
+	clear: both;
+	text-indent: 1cm;
+	padding-top: 20px;
+	font-size: 18px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.circle-div{
+	width: 60px;
+	height:60px;
+	background-color:#007bff;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	border-radius: 50px;
+	transition: border-radius 100ms,width 0.5s,height 0.5s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.circle-div:hover{
+	border-radius: 5px;
+	width: 250px;
+	height: 400px;
+	overflow-y:scroll;
+}
+#music-list{
+	display: none;
+}
+.music-icon{
+	width: 40px;
+	margin: 10px auto;
+	display: block;
+	animation: music-icon-anim 2s linear infinite;
+}
+.icon-hide{
+	animation: music-icon-anim-hide 0.5s linear 1;
+	animation-fill-mode: forwards;
+}
+.icon-show{
+	animation: music-icon-anim-show 0.5s linear 1;
+	animation-fill-mode: forwards;
+}
+.icon-div{
+	width: fit-content;
+	margin: 10px auto;
+	height: 30px;
+}
+.footer-div p{
+	line-height: 20px;
+}
+.icon-div img{
+	height: 30px;
+}
+@keyframes anim-num{
+	0%{
+		font-size: 12px;
+		margin-top: 43px;
+		margin-left: 0px;
+	}
+	20%{
+		font-size: 40px;
+		margin-top: 20px;
+		margin-left: 35px;
+	}
+	80%{
+		font-size: 40px;
+		margin-top: 20px;
+		margin-left: 35px;
+	}
+	100%{
+		font-size: 12px;
+		margin-top: 43px;
+		margin-left: 80px;
+	}
+}
+@keyframes photo-div-anim{
+	0%{
+		margin-top: 0px;
+		background-color:#007bff;
+	}
+	50%{
+		margin-top: 250px;
+		background-color: #17a2b8;
+	}
+	100%{
+		background-color:#007bff;
+		margin-top: 0px;
+	}
+}
+@keyframes photo-div-extend-anim{
+	0%{
+		width: 100px;
+		height:100px;
+		border-radius: 50%;
+		background-color:#007bff;
+	}
+	50%{
+		width: 100px;
+		height:100px;
+		border-radius: 0px;
+		background-color:#007bff;
+	}
+	90%{
+		width: 100%;
+		height:fit-content;
+		border-radius: 0px;
+		background-color:white;
+	}
+	100%{
+		width: 100%;
+		height:fit-content;
+		border-radius: 0px;
+		background:none;
+	}
+}
+@keyframes music-icon-anim-hide{
+	from{
+		width: 40px;
+	}
+	to{
+		width: 0px;
+		visibility: hidden;
+	}
+}
+@keyframes music-icon-anim-show{
+	from{
+		width: 0px;
+	}
+	to{
+		width: 40px;
+		visibility: visible;
+	}
+}
+@keyframes music-icon-anim{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
