@@ -5,6 +5,7 @@ $(function(){
     getNotice()
     getViewCount()
     let isPhotoShowing=false;
+    let span=$("#consoleSpan")
 
     /*const query = Bmob.Query('view_count');
     query.get('9f33fc4b08').then(res => {
@@ -25,6 +26,7 @@ $(function(){
         /*console.log("now"+nowPosition)
         let column1Top=$("#photo-column-title").offset().top
         console.log(column1Top)*/
+        //span.text(nowPosition)
         if (nowPosition>=300){
             if(!isPhotoShowing){
                 isPhotoShowing=true
