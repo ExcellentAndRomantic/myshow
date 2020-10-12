@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LXQ 新版主页</title>
     
-    <!-- 新 Bootstrap4 核心 CSS 文件 -->
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-	<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
-	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- 新 Bootstrap4 核心 CSS 文件 
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">-->
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>-->
+    <!-- jQuery2.1 -->
+    <script src="http://stares.okgoes.com/js/jquery-2.1.4.min.js"></script>
+	<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js 
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>-->
+	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
     <!-- 获取所在城市 -->
     <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <!-- VUE -->
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
     <!-- 导入bmob -->
     <script src="js/Bmob-2.2.5.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <!-- 导入index2.js -->
     <script src="js/index2.js"></script>
     <!-- 主题颜色 -->
@@ -25,86 +33,73 @@
     <link rel="stylesheet" href="css/index-media.css"/>
 </head>
 <body>
-    <nav class="index_nav common60px">
-        <!-- 导航栏背景 -->
-        <div class="nav_background common60px"></div>
-        <div class="nav_content common60px">
-            <ul class="nav_ul">
-                <li>大屏幕</li>
-                <li>我的相册</li>
-                <li>我的日记</li>
-                <li>评论网站</li>
-                <li>关于我</li>
-            </ul>
-        </div>
-    </nav>
-    <div class="lxq-jumbotron ">
-    <div class="jumbotron-bg"></div>
-    <canvas class="dark-mask" id="darkMask"></canvas>
-    <!-- 导入背景动画js -->
-    <script src="js/index-canvas.js"></script>
-    <div class="welcome">
-        <h1 class="welcome-hello">
-            欢迎来到我的网站
-        </h1>
-        <div class="custom-hr"></div>
-        <div class="linear-text">
-            <span id="consoleSpan">
-                天青色等烟雨 而我在等你<br>
-                炊烟袅袅升起 隔江千万里<br>
-                在瓶底书汉隶仿前朝的飘逸<br>
-                就当我为遇见你伏笔<br>
-                天青色等烟雨 而我在等你<br>
-                月色被打捞起 晕开了结局<br>
-                如传世的青花瓷自顾自美丽<br>
-                你眼带笑意
-            </span>
-        </div>
-    </div>
-</div>
 
-<!--我的相册 --> 
-<div class="container-fluid my-photo-div">
-    <div class="row" id="photo-column-title">
-        <div class="col-md-8 offset-md-2">
-            <!--<div class="double-line"></div>-->
-            <span class="column-title">我的相册</span>
+    <div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Excellent</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">自我介绍</a></li>
+            <li><a href="badges.html">专业技能</a></li>
+            <li><a href="collapsible.html">未来规划</a></li>
+            <li><a href="mobile.html">公开日记</a></li>
+            <li><a href="mobile.html">网站评论</a></li>
+            <li><a href="mobile.html">给我评论</a></li>
+            <li><a href="mobile.html">最后</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="sass.html">自我介绍</a></li>
+            <li><a href="badges.html">专业技能</a></li>
+            <li><a href="collapsible.html">未来规划</a></li>
+            <li><a href="mobile.html">公开日记</a></li>
+            <li><a href="mobile.html">网站评论</a></li>
+            <li><a href="mobile.html">给我评论</a></li>
+            <li><a href="mobile.html">最后</a></li>
+          </ul>
         </div>
+      </nav>
     </div>
 
-</div>
+
+      <main>
+        <div class="parallax-container">
+            <div class="parallax"><img src="img/index_bg.jpg"></div>
+          </div>
+          <div class="section white">
+            <div class="row container">
+              <h2 class="header">Parallax</h2>
+              <p class="grey-text text-darken-3 lighten-3">视差是一种效果，在背景内容或图片在一下情况：相对于前景内容滚动的速度有一个不同的移动速度。</p>
+            </div>
+          </div>
+          <div class="parallax-container">
+            <div class="parallax"><img src="img/index_bg.jpg"></div>
+          </div>
+          
+      </main>
+
+      
 
 
+    <script>
+        /*Bmob.initialize("d5e6671ae5ce13f4","24166")
+        Bmob.debug(true)
+        let query = Bmob.Query('web_notic');
+        query.find().then(res => {
+            new Vue({
+                el:"#modal1",
+                data:{
+                    title:res[0].title+"我爱你",
+                    content:res[0].content
+                }
+            })
 
-<!-- 按钮：用于打开模态框 -->
-<button style="display: none;" id="auto-btn" type="button" class="btn btn-primary" data-toggle="modal"
-data-target="#myModal">
-打开模态框
-</button>
-<!-- 模态框 -->
-<div class="modal fade" id="myModal">
-<div class="modal-dialog modal-lg">
-    <div class="modal-content">
+            if(res[0].is_show){
+                $("#modal1").trigger("click");
+            }
+            
+        });*/
 
-        <!-- 模态框头部 -->
-        <div class="modal-header">
-            <h4 class="modal-title text-primary" id="notice_title">嗨，你好，欢迎参观！</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- 模态框主体 -->
-        <div class="modal-body" id="notice-content">
-            网站目前还在建设当中，你当前看到的是预览版本。网站正式发布后，内容将会更加精彩。<br>
-            为了更好的展示效果，建议使用Chrome浏览器。
-        </div>
-
-        <!-- 模态框底部 -->
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" id="closewindow" data-dismiss="modal">关闭</button>
-        </div>
-
-    </div>
-</div>
-</div>
+    </script>
 </body>
 </html>

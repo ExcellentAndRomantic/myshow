@@ -1,12 +1,12 @@
 /*入口函数*/
 $(function(){
-    Bmob.initialize("d5e6671ae5ce13f4","24166")
-    Bmob.debug(true)
-    getNotice()
-    getViewCount()
-    let isPhotoShowing=false;
-    let span=$("#consoleSpan")
-
+    //Bmob.initialize("d5e6671ae5ce13f4","24166")
+    //Bmob.debug(true)
+    //getNotice()
+    //getViewCount()
+    //let isPhotoShowing=false;
+    //let span=$("#consoleSpan")
+    //$('#modal1').modal('open');
     /*const query = Bmob.Query('view_count');
     query.get('9f33fc4b08').then(res => {
         console.log(res)
@@ -27,13 +27,13 @@ $(function(){
         let column1Top=$("#photo-column-title").offset().top
         console.log(column1Top)*/
         //span.text(nowPosition)
-        if (nowPosition>=300){
+        /*if (nowPosition>=300){
             if(!isPhotoShowing){
                 isPhotoShowing=true
                 alert("滚动到我的相册栏目了")
             }
             
-        }
+        }*/
     });
     
     //获取通知
